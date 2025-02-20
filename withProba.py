@@ -10,7 +10,7 @@ load_dotenv()
 
 CORS(app)
 
-MODEL_PATH = './Model/CropRecomandation_DataSameWithJurnal(TA_99,5%).pkl'
+MODEL_PATH = './Model/CropRecomandation_stacking_model(99,77%).pkl'
 
 # Load model
 try:
