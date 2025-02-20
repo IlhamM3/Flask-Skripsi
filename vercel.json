@@ -2,14 +2,15 @@
     "version": 2,
     "builds": [
       {
-        "src": "api/withProba.py",
-        "use": "@vercel/python"
+        "src": "start.sh",
+        "use": "@vercel/static-build",
+        "config": { "distDir": "api" }
       }
     ],
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "api/withProba.py"
+        "dest": "start.sh"
       }
     ]
   }
