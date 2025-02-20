@@ -2,15 +2,14 @@
     "version": 2,
     "builds": [
       {
-        "src": "start.sh",
-        "use": "@vercel/static-build",
-        "config": { "distDir": "api" }
+        "src": "Procfile",
+        "use": "@vercel/static-build"
       }
     ],
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "start.sh"
+        "dest": "Procfile"
       }
     ]
   }
