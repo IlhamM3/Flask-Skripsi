@@ -4,7 +4,7 @@ import numpy as np
 
 app = Flask(__name__)
 
-MODEL_PATH = './Model/CropRecomandation_DataSameWithJurnal(TA_99,5%).pkl'
+MODEL_PATH = './Model/CropRecomandation_stacking_model(99,77%).pkl'
 try:
     with open(MODEL_PATH, 'rb') as file:
         model = pickle.load(file)
