@@ -1,13 +1,12 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "start.sh",
-        "use": "@vercel/static"
-      }
-    ],
-    "routes": [
-      { "src": "/(.*)", "dest": "start.sh" }
-    ]
-  }
-  
+  "version": 2,
+  "builds": [
+    {
+      "src": "start.sh",
+      "use": "@vercel/bash"
+    }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "start.sh" }
+  ]
+}
