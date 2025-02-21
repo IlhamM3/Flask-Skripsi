@@ -1,13 +1,18 @@
 {
-    "build": {
-      "env": {
+    "version": 2,
+    "builds": [
+        {
+            "src": "requirements.txt",
+            "use": "@vercel/python"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/.*",
+            "dest": "api/withProba.py"
+        }
+    ],
+    "env": {
         "PYTHON_VERSION": "3.10"
-      },
-      "commands": [
-        "echo 'Menjalankan runtime...'",
-        "pip install -r requirements.txt"
-      ]
-    },
-    "start": "python api/withProba.py"
-  }
-  
+    }
+}
