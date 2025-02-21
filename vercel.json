@@ -3,7 +3,7 @@
     "functions": {
         "api/withProba.py": {
             "runtime": "@vercel/python",
-            "includeFiles": ["build.sh"]
+            "includeFiles": "build.sh"
         }
     },
     "routes": [
