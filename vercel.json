@@ -1,16 +1,15 @@
 {
     "version": 2,
-    "builds": [
-      {
-        "src": "api/withProba.py",
-        "use": "@vercel/python",
-        "config": { "buildCommand": "sh build.sh" }
-      }
-    ],
+    "functions": {
+        "api/withProba.py": {
+            "runtime": "@vercel/python",
+            "includeFiles": ["build.sh"]
+        }
+    },
     "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "api/withProba.py"
-      }
+        {
+            "src": "/(.*)",
+            "dest": "api/withProba.py"
+        }
     ]
 }
